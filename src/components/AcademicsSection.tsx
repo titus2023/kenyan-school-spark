@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { BookOpen, Globe, Calculator, Flask, Palette, Award, BookMarked, MapPin } from 'lucide-react';
+import { BookOpen, Globe, Calculator, Beaker, Palette, Award, BookMarked, MapPin } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 
@@ -9,7 +9,7 @@ const AcademicsSection = () => {
   const academicSubjects = [
     { icon: <BookOpen className="h-6 w-6" />, name: "Languages", description: "English, Kiswahili, French and German." },
     { icon: <Calculator className="h-6 w-6" />, name: "Mathematics", description: "Core Mathematics and Additional Mathematics." },
-    { icon: <Flask className="h-6 w-6" />, name: "Sciences", description: "Biology, Chemistry, Physics and Computer Studies." },
+    { icon: <Beaker className="h-6 w-6" />, name: "Sciences", description: "Biology, Chemistry, Physics and Computer Studies." },
     { icon: <Globe className="h-6 w-6" />, name: "Humanities", description: "History, Geography, Religious Studies and Social Ethics." },
     { icon: <Palette className="h-6 w-6" />, name: "Arts", description: "Music, Art and Design, and Drama." },
     { icon: <BookMarked className="h-6 w-6" />, name: "Technical Subjects", description: "Business Studies, Agriculture, and Home Science." },
