@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BookOpen, Globe, Calculator, Beaker, Palette, Award, BookMarked, MapPin } from 'lucide-react';
@@ -138,7 +137,7 @@ const AcademicsSection = () => {
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="p-2 bg-kenya-red/10 rounded-full mr-4 mt-1">
-                      <Flask className="h-5 w-5 text-kenya-red" />
+                      <Beaker className="h-5 w-5 text-kenya-red" />
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-1">Science Laboratories</h4>
