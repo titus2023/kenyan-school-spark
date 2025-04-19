@@ -14,7 +14,7 @@ const Footer = () => {
                   <div className="w-6 h-6 bg-kenya-green rounded-full"></div>
                 </div>
               </div>
-              <span className="text-xl font-bold">Nyota Secondary School</span>
+              <span className="text-xl font-bold">Jimba-Gede Secondary School</span>
             </div>
             <p className="text-gray-400 mb-6">
               Nurturing excellence, character, and leadership for Kenya's future. Providing quality education since 1985.
@@ -77,17 +77,17 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-kenya-red mr-3 mt-1" />
                 <span className="text-gray-400">
-                  Nyota Road, Karen, Nairobi, Kenya<br />
-                  P.O. Box 12345-00100, Nairobi
+                  Jimba Road, Watamu, Kilifi, Kenya<br />
+                  P.O. Box 12345-00100, Watamu
                 </span>
               </li>
               <li className="flex items-center">
                 <PhoneCall className="h-5 w-5 text-kenya-red mr-3" />
-                <span className="text-gray-400">+254 712 345 678</span>
+                <span className="text-gray-400">+254 722 424 561</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-kenya-red mr-3" />
-                <span className="text-gray-400">info@nyotaschool.ac.ke</span>
+                <span className="text-gray-400">jimba-gede@yahoo.com</span>
               </li>
             </ul>
           </div>
@@ -116,7 +116,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-          <p>© {new Date().getFullYear()} Nyota Secondary School. All Rights Reserved.</p>
+          <p>© {new Date().getFullYear()} Jimba-Gede Secondary School. All Rights Reserved.</p>
           <div className="mt-2">
             <a href="#" className="text-gray-500 hover:text-gray-400 mx-2">Privacy Policy</a>
             <a href="#" className="text-gray-500 hover:text-gray-400 mx-2">Terms of Service</a>
