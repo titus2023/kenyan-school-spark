@@ -5,7 +5,7 @@ import { Check, Target, Heart, Award } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="pattern-bg py-16 md:py-24">
+    <section id="about" className="pattern-bg py-8 md:py-18">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,8 +17,8 @@ const AboutSection = () => {
           <h2 className="section-title">About Our School</h2>
           <div className="w-20 h-1 bg-kenya-accent mx-auto mt-4 mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg text-muted-foreground">
-            Founded in 1985, Nyota Secondary School has been a beacon of academic excellence and character 
-            development in Kenya for over three decades.
+            Founded in 1985, Jimba-Gede Secondary School has been a beacon of academic excellence and character 
+            development in Kilifi County, Kenya for over three decades.
           </p>
         </motion.div>
 
@@ -31,19 +31,19 @@ const AboutSection = () => {
           >
             <h3 className="text-2xl font-bold mb-6 border-l-4 border-kenya-red pl-4">Our History & Heritage</h3>
             <p className="mb-4 text-muted-foreground">
-              Nyota Secondary School was established with a vision to provide quality education 
+              Jimba-Gede Secondary School was established with a vision to provide quality education 
               that would empower young Kenyans to become leaders in their communities and beyond.
             </p>
             <p className="mb-6 text-muted-foreground">
               Over the years, we have grown from a small institution with just 50 students to one of 
-              the most respected educational establishments in the country, with state-of-the-art 
+              the most respected educational establishments in the region, with state-of-the-art 
               facilities and a track record of excellence.
             </p>
             
             <div className="space-y-3">
               <div className="flex items-start">
                 <Check className="text-kenya-green mr-2 mt-1 h-5 w-5 flex-shrink-0" />
-                <p>Consistently ranked among the top 10 schools in KCSE results</p>
+                <p>Consistently ranked among the top 10 schools in KCSE result in Watamu Zone</p>
               </div>
               <div className="flex items-start">
                 <Check className="text-kenya-green mr-2 mt-1 h-5 w-5 flex-shrink-0" />
@@ -74,7 +74,7 @@ const AboutSection = () => {
               style={{ height: "450px" }}
             />
             <div className="absolute -bottom-8 -left-8 bg-white p-4 rounded-lg shadow-lg max-w-xs hidden md:block">
-              <p className="text-lg font-medium">"Our beautiful campus spans 25 acres of land with modern facilities and a nurturing environment."</p>
+              <p className="text-lg font-medium">"Our beautiful school boasts modern facilities and a nurturing environment."</p>
             </div>
           </motion.div>
         </div>
