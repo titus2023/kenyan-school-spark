@@ -15,7 +15,7 @@ import ScrollToTop from '@/components/ScrollToTop';
 const Index = () => {
   useEffect(() => {
     // Update page title
-    document.title = "Nyota Secondary School - Excellence in Education";
+    document.title = "Jimba-Gede Secondary School";
   }, []);
 
   return (
