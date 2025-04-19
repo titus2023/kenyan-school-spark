@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Clock, MapPin, ArrowRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import {
   Tabs,
@@ -8,6 +7,9 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs";
+import NewsCard from './news/NewsCard';
+import EventCard from './events/EventCard';
+import SchoolCalendar from './events/SchoolCalendar';
 
 const NewsEventsSection = () => {
   const newsItems = [
@@ -88,33 +90,7 @@ const NewsEventsSection = () => {
           <TabsContent value="news" className="focus-visible:outline-none focus-visible:ring-0">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {newsItems.map((news, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-lg overflow-hidden shadow-md card-hover"
-                >
-                  <div className="h-48 overflow-hidden">
-                    <img 
-                      src={news.image} 
-                      alt={news.title} 
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center mb-3">
-                      <Calendar className="h-4 w-4 text-kenya-red mr-2" />
-                      <span className="text-sm text-muted-foreground">{news.date}</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-2">{news.title}</h3>
-                    <p className="text-muted-foreground mb-4">{news.excerpt}</p>
-                    <a href="#" className="text-kenya-red font-medium flex items-center hover:underline">
-                      Read More <ArrowRight className="ml-1 h-4 w-4" />
-                    </a>
-                  </div>
-                </motion.div>
+                <NewsCard key={index} {...news} index={index} />
               ))}
             </div>
             
@@ -128,67 +104,11 @@ const NewsEventsSection = () => {
           <TabsContent value="events" className="focus-visible:outline-none focus-visible:ring-0">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {upcomingEvents.map((event, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white p-6 rounded-lg shadow-md border-l-4 border-kenya-green card-hover"
-                >
-                  <h3 className="text-xl font-bold mb-3">{event.title}</h3>
-                  <div className="space-y-2 mb-4">
-                    <div className="flex items-center">
-                      <Calendar className="h-4 w-4 text-kenya-green mr-2" />
-                      <span className="text-muted-foreground">{event.date}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="h-4 w-4 text-kenya-green mr-2" />
-                      <span className="text-muted-foreground">{event.time}</span>
-                    </div>
-                    <div className="flex items-center">
-                      <MapPin className="h-4 w-4 text-kenya-green mr-2" />
-                      <span className="text-muted-foreground">{event.location}</span>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground">{event.description}</p>
-                </motion.div>
+                <EventCard key={index} {...event} index={index} />
               ))}
             </div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="mt-10 bg-muted p-6 rounded-lg"
-            >
-              <h3 className="text-2xl font-bold mb-4">School Calendar Highlights</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="bg-white p-4 rounded-lg text-center">
-                  <h4 className="font-semibold mb-2">Term 1</h4>
-                  <p className="text-muted-foreground">Jan 8 - Apr 5, 2025</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg text-center">
-                  <h4 className="font-semibold mb-2">Term 2</h4>
-                  <p className="text-muted-foreground">Apr 29 - Aug 2, 2025</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg text-center">
-                  <h4 className="font-semibold mb-2">Term 3</h4>
-                  <p className="text-muted-foreground">Aug 26 - Nov 1, 2025</p>
-                </div>
-                <div className="bg-white p-4 rounded-lg text-center">
-                  <h4 className="font-semibold mb-2">KCSE Exams</h4>
-                  <p className="text-muted-foreground">Nov 4 - Nov 29, 2025</p>
-                </div>
-              </div>
-              
-              <div className="text-center mt-6">
-                <Button className="bg-kenya-green hover:bg-kenya-green/90">
-                  Download Full Academic Calendar
-                </Button>
-              </div>
-            </motion.div>
+            <SchoolCalendar />
           </TabsContent>
         </Tabs>
       </div>
