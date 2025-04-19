@@ -18,7 +18,7 @@ const ContactSection = () => {
           <h2 className="section-title">Contact Us</h2>
           <div className="w-20 h-1 bg-kenya-accent mx-auto mt-4 mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg text-muted-foreground">
-            We'd love to hear from you. Reach out to us with any questions or schedule a visit to our campus.
+            We'd love to hear from you. Reach out to us with any questions or schedule a visit to our School.
           </p>
         </motion.div>
 
@@ -73,7 +73,7 @@ const ContactSection = () => {
                 <select className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-kenya-green">
                   <option value="">Select Subject</option>
                   <option value="admission">Admission Inquiry</option>
-                  <option value="tour">Campus Tour Request</option>
+                  <option value="tour">School Tour Request</option>
                   <option value="employment">Employment Opportunities</option>
                   <option value="general">General Information</option>
                   <option value="other">Other</option>
@@ -110,8 +110,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Our Location</h4>
-                  <p className="text-muted-foreground">Nyota Road, Karen, Nairobi, Kenya</p>
-                  <p className="text-muted-foreground">P.O. Box 12345-00100, Nairobi</p>
+                  <p className="text-muted-foreground">Jimba Road, Watamu, Kilifi, Kenya</p>
+                  <p className="text-muted-foreground">P.O. Box 12345-00100, Watamu</p>
                 </div>
               </div>
               
@@ -121,8 +121,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Phone Numbers</h4>
-                  <p className="text-muted-foreground">Main Office: +254 712 345 678</p>
-                  <p className="text-muted-foreground">Admissions: +254 723 456 789</p>
+                  <p className="text-muted-foreground">Main Office: +254 722 424 561</p>
+                  <p className="text-muted-foreground">Admissions: +254 724 351 941</p>
                 </div>
               </div>
               
@@ -132,8 +132,8 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Email Addresses</h4>
-                  <p className="text-muted-foreground">General Inquiries: info@nyotaschool.ac.ke</p>
-                  <p className="text-muted-foreground">Admissions: admissions@nyotaschool.ac.ke</p>
+                  <p className="text-muted-foreground">General Inquiries: info@jimba-gede@yahoo.com</p>
+                  <p className="text-muted-foreground">Admissions: admissions@jimba-gede@yahoo.com</p>
                 </div>
               </div>
               
