@@ -1,59 +1,30 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, Calendar, Clock, FileText, DollarSign, HelpCircle } from 'lucide-react';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { BookOpen, Globe, Calculator, Beaker, Palette, Award, BookMarked, MapPin } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 
-const AdmissionsSection = () => {
-  const admissionSteps = [
-    { 
-      title: "Application Submission", 
-      description: "Complete the online application form and submit all required documents.",
-      icon: <FileText className="h-6 w-6" />
-    },
-    { 
-      title: "Entrance Examination", 
-      description: "Students take a standardized entrance exam to assess their academic readiness.",
-      icon: <Clock className="h-6 w-6" />
-    },
-    { 
-      title: "Interview Process", 
-      description: "Shortlisted candidates and their parents attend an interview with school officials.",
-      icon: <CheckCircle className="h-6 w-6" />
-    },
-    { 
-      title: "Admission Decision", 
-      description: "Final selection is made based on examination results, interview, and available spaces.",
-      icon: <Calendar className="h-6 w-6" />
-    },
+const AcademicsSection = () => {
+  const academicSubjects = [
+    { icon: <BookOpen className="h-6 w-6" />, name: "Languages", description: "English, Kiswahili." },
+    { icon: <Calculator className="h-6 w-6" />, name: "Mathematics", description: "Core Mathematics and Additional Mathematics." },
+    { icon: <Beaker className="h-6 w-6" />, name: "Sciences", description: "Biology, Chemistry, Physics." },
+    { icon: <Globe className="h-6 w-6" />, name: "Humanities", description: "History, Geography, Religious Studies." },
+    { icon: <Palette className="h-6 w-6" />, name: "Arts", description: "Music, Art, and Drama." },
+    { icon: <BookMarked className="h-6 w-6" />, name: "Technical Subjects", description: "Business Studies, Agriculture." },
   ];
 
-  const faqs = [
-    {
-      question: "What are the admission requirements for Grade 10?",
-      answer: "For Grade 10 admission, students must have completed their KJSSEA with a minimum score of 250 marks. They also need to submit their KJSSEA result slip, two recommendation letters from their primary school, birth certificate, and passport photos. All candidates must take our entrance examination and attend an interview with a parent or guardian."
-    },
-    {
-      question: "Do you accept transfer students to other Forms?",
-      answer: "Yes, we accept transfer students to Forms 2 and 3 on a case-by-case basis, depending on available spaces and the student's academic performance. Transfer students must provide their current school transcript, recommendation letters, and take our placement test. We do not typically accept transfers into Form 4."
-    },
-    {
-      question: "What is the school's fee structure?",
-      answer: "Our annual fees range from KSh 7,000 to KSh 10,000 per term, depending on the Form level and whether the student is a Termly Fee or Annual Fee. This covers tuition, development fund, caution money, and activity fees. Additional costs may apply for specialized programs and materials. Detailed fee structures are provided upon request."
-    },
-    {
-      question: "Are scholarships or financial aid available?",
-      answer: "We offer a limited number of merit-based scholarships to academically gifted students and need-based financial aid to deserving cases. Applications for financial assistance must be submitted along with the admission application and include supporting documentation of financial need. Our scholarship committee reviews all applications and makes decisions based on merit and available funds."
-    },
-    {
-      question: "What is the teacher-to-student ratio in classrooms?",
-      answer: "We maintain a low teacher-to-student ratio of 1:15 to ensure personalized attention and effective learning. Our specialized programs may have even smaller class sizes to facilitate more intensive instruction and interaction."
-    },
+  const achievements = [
+    "Ranked fairly in national KCSE performance for 3 consecutive years",
+    "4 national science fair awards in the last decade",
+    "Produced 4 University Students in the past 5 years",
+    "Regional Drama in debate competitions for 7 years running, Courtesy: Mr Nicholus.",
+    "Over 90% of our graduates gain admission to good tertiary institutions",
+    "Subcounty Javeline-Ladies  winners 2025",
   ];
 
   return (
-    <section id="admissions" className="bg-white py-16 md:py-24">
+    <section id="curriculum" className="bg-white py-16 md:py-24">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,276 +33,303 @@ const AdmissionsSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="section-title">Admissions</h2>
-          <div className="w-20 h-1 bg-kenya-accent mx-auto mt-1 mb-6"></div>
+          <h2 className="section-title">Academic Excellence</h2>
+          <div className="w-20 h-1 bg-kenya-accent mx-auto mt-4 mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg text-muted-foreground">
-            Join our community of learners and embark on a journey of academic excellence and personal growth.
-            We're looking for motivated students who will contribute to our diverse and dynamic environment.
+            We offer a comprehensive curriculum that prepares students for success in their future endeavors, 
+            blending the Kenyan 8-4-4 system with international education standards.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="text-2xl font-bold mb-6">Admission Process</h3>
-            <p className="mb-8 text-muted-foreground">
-              Our admission process is designed to identify students who will thrive in our rigorous academic 
-              environment and contribute positively to our school community. Here's what to expect:
-            </p>
-            
-            <div className="space-y-6">
-              {admissionSteps.map((step, index) => (
+        <Tabs defaultValue="curriculum" className="w-full">
+          <TabsList className="grid w-full md:w-fit mx-auto grid-cols-3 mb-12">
+            <TabsTrigger value="curriculum">Curriculum</TabsTrigger>
+            <TabsTrigger value="facilities">Facilities</TabsTrigger>
+            <TabsTrigger value="achievements">Achievements</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="curriculum" className="focus-visible:outline-none focus-visible:ring-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {academicSubjects.map((subject, index) => (
                 <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 10 }}
+                  key={subject.name}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="flex"
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-white border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-kenya-green/10 flex items-center justify-center mr-4">
-                    <div className="text-kenya-green">
-                      {step.icon}
-                    </div>
+                  <div className="p-3 bg-kenya-green/10 rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                    {subject.icon}
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold mb-1">Step {index + 1}: {step.title}</h4>
-                    <p className="text-muted-foreground">{step.description}</p>
-                  </div>
+                  <h3 className="text-xl font-bold mb-2">{subject.name}</h3>
+                  <p className="text-muted-foreground">{subject.description}</p>
                 </motion.div>
               ))}
             </div>
             
-            <div className="mt-10">
-              <h4 className="text-lg font-semibold mb-3">Key Dates for 2025 Admissions</h4>
-              <div className="bg-muted p-4 rounded-lg">
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span>Application Opens</span>
-                  <span className="font-medium">May 2, 2025</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span>Application Deadline</span>
-                  <span className="font-medium">December 15, 2025</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span>Entrance Examinations</span>
-                  <span className="font-medium">June 10-11, 2025</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span>Interviews</span>
-                  <span className="font-medium">June 20-24, 2025</span>
-                </div>
-                <div className="flex justify-between py-2">
-                  <span>Admission Decision</span>
-                  <span className="font-medium">July 10, 2025</span>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className="bg-muted rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-6">Apply Now</h3>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="mt-12 bg-muted rounded-lg p-8"
+            >
+              <h3 className="text-2xl font-bold mb-4">Our Educational Approach</h3>
               <p className="mb-6 text-muted-foreground">
-                Take the first step towards joining our community. Fill out the preliminary application form,
-                and our admissions team will guide you through the rest of the process.
+                Our curriculum embraces both the Kenyan national system and elements of international education, 
+                providing students with a well-rounded learning experience that prepares them for global opportunities.
               </p>
-              
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-1">First Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-kenya-green"
-                      placeholder="First Name"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-1">Last Name</label>
-                    <input 
-                      type="text" 
-                      className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-kenya-green"
-                      placeholder="Last Name"
-                    />
-                  </div>
-                </div>
-                
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium mb-1">Email Address</label>
-                  <input 
-                    type="email" 
-                    className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-kenya-green"
-                    placeholder="Email Address"
-                  />
+                  <h4 className="text-lg font-semibold mb-3">Kenyan 8-4-4 System</h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-kenya-red rounded-full mr-2 mt-2"></span>
+                      <span>Comprehensive preparation for KCSE examinations</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-kenya-red rounded-full mr-2 mt-2"></span>
+                      <span>Strong focus on core academic subjects</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-kenya-red rounded-full mr-2 mt-2"></span>
+                      <span>Structured learning with regular assessments</span>
+                    </li>
+                  </ul>
                 </div>
-                
                 <div>
-                  <label className="block text-sm font-medium mb-1">Phone Number</label>
-                  <input 
-                    type="tel" 
-                    className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-kenya-green"
-                    placeholder="Phone Number"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Applying for Form</label>
-                  <select className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-kenya-green">
-                    <option value="">Select Form</option>
-                    <option value="form2">Form 2</option>
-                    <option value="form3">Form 3</option>
-                    <option value="form4">Form 4</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium mb-1">Message (Optional)</label>
-                  <textarea 
-                    className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-kenya-green"
-                    rows={4}
-                    placeholder="Additional information or questions"
-                  ></textarea>
-                </div>
-                
-                <Button type="submit" className="w-full bg-kenya-green hover:bg-kenya-green/90">
-                  Submit Application
-                </Button>
-              </form>
-              
-              <div className="mt-6 text-center text-sm text-muted-foreground">
-                <p>For inquiries, contact our admissions office:</p>
-                <p className="font-medium mt-1">admissions@jimba-gede@yahoo.com | +254 722 424 561</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-        
-        {/* Tuition & Financial Aid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="mb-16"
-        >
-          <h3 className="text-2xl font-bold mb-6 text-center">Tuition & Financial Aid</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-border">
-              <div className="flex items-center mb-4">
-                <div className="p-2 bg-kenya-red/10 rounded-full mr-3">
-                  <DollarSign className="h-6 w-6 text-kenya-red" />
-                </div>
-                <h4 className="text-xl font-semibold">Fee Structure</h4>
-              </div>
-              <div className="space-y-3">
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span>Form 2 (Annual Fee)</span>
-                  <span className="font-medium">KSh 21,000 per year</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span>Form 2 (Termly Fee)</span>
-                  <span className="font-medium">KSh 7,000 per term</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span>Forms 2 (Annual Fee)</span>
-                  <span className="font-medium">KSh 24,000 per year</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span>Forms 2 (Termly Fee)</span>
-                  <span className="font-medium">KSh 8,000 per term</span>
-                </div>
-                <div className="flex justify-between py-2 border-b border-border">
-                  <span>Form 4 (Annual Fee)</span>
-                  <span className="font-medium">KSh 30,000 per year</span>
-                </div>
-                <div className="flex justify-between py-2">
-                  <span>Form 4 (Termly Fee)</span>
-                  <span className="font-medium">KSh 10,000 per term</span>
+                  <h4 className="text-lg font-semibold mb-3">International Standards</h4>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-kenya-green rounded-full mr-2 mt-2"></span>
+                      <span>Project-based learning components</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-kenya-green rounded-full mr-2 mt-2"></span>
+                      <span>21st century skills development</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-kenya-green rounded-full mr-2 mt-2"></span>
+                      <span>Digital literacy and technology integration</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <p className="mt-4 text-sm text-muted-foreground">
-                * Fees include tuition, development fund, caution money, and activity fees. 
-                Additional costs may apply for specialized programs.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-sm border border-border">
-              <div className="flex items-center mb-4">
-                <div className="p-2 bg-kenya-green/10 rounded-full mr-3">
-                  <HelpCircle className="h-6 w-6 text-kenya-green" />
-                </div>
-                <h4 className="text-xl font-semibold">Scholarships & Financial Aid</h4>
-              </div>
-              <p className="mb-4 text-muted-foreground">
-                We believe that financial circumstances should not be a barrier to quality education. 
-                Jimba-Gede Secondary School offers several financial aid options:
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-kenya-green rounded-full mr-2 mt-2"></span>
-                  <span><strong>Academic Merit Scholarships:</strong> For top-performing students based on entrance exam results and previous academic records.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-kenya-green rounded-full mr-2 mt-2"></span>
-                  <span><strong>Need-Based Financial Aid:</strong> For families demonstrating financial need, covering up to 50% of tuition costs.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-kenya-green rounded-full mr-2 mt-2"></span>
-                  <span><strong>Talent Scholarships:</strong> For exceptional abilities in sports, music, art, or other extracurricular areas.</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="w-2 h-2 bg-kenya-green rounded-full mr-2 mt-2"></span>
-                  <span><strong>Payment Plans:</strong> Flexible payment options available for all families.</span>
-                </li>
-              </ul>
-              <Button className="mt-6 bg-kenya-accent hover:bg-kenya-accent/80">
-                Learn More About Financial Aid
-              </Button>
-            </div>
-          </div>
-        </motion.div>
-        
-        {/* FAQs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h3 className="text-2xl font-bold mb-6 text-center">Frequently Asked Questions</h3>
-          <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-                <AccordionContent>
-                  <p className="text-muted-foreground">{faq.answer}</p>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+            </motion.div>
+          </TabsContent>
           
-          <div className="text-center mt-8">
-            <p className="text-muted-foreground mb-4">
-              Can't find the answer to your question? Contact our admissions office directly.
-            </p>
-            <Button className="bg-kenya-red hover:bg-kenya-red/90">
-              Contact Admissions
-            </Button>
-          </div>
-        </motion.div>
+          <TabsContent value="facilities" className="focus-visible:outline-none focus-visible:ring-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h3 className="text-2xl font-bold mb-6">State-of-the-art Learning Facilities</h3>
+                <p className="mb-6 text-muted-foreground">
+                  Our school is equipped with modern facilities that create an optimal learning environment
+                  for our students. From science labs to sports facilities, we provide everything needed
+                  for holistic development.
+                </p>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <div className="p-2 bg-kenya-red/10 rounded-full mr-4 mt-1">
+                      <Beaker className="h-5 w-5 text-kenya-red" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold mb-1">Science Laboratories</h4>
+                      <p className="text-muted-foreground">Fully equipped Physics, Chemistry, and Biology labs with modern equipment for practical learning.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="p-2 bg-kenya-green/10 rounded-full mr-4 mt-1">
+                      <BookOpen className="h-5 w-5 text-kenya-green" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold mb-1">Library & Resource Center</h4>
+                      <p className="text-muted-foreground">A comprehensive library with several books, digital resources, and quiet study areas. Still improving...</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="p-2 bg-kenya-accent/10 rounded-full mr-4 mt-1">
+                      <Globe className="h-5 w-5 text-kenya-accent" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold mb-1">Computer Labs</h4>
+                      <p className="text-muted-foreground">There is a plan to install High-speed internet connected computer labs with the latest software for digital literacy and computer studies.</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start">
+                    <div className="p-2 bg-kenya-earth/10 rounded-full mr-4 mt-1">
+                      <Palette className="h-5 w-5 text-kenya-earth" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold mb-1">Arts & Music Studios</h4>
+                      <p className="text-muted-foreground">Dedicated spaces for visual arts, music practice, and performing arts with professional equipment.</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <Button className="mt-8 bg-kenya-green hover:bg-kenya-green/90">
+                  Take a Virtual Tour
+                </Button>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="grid grid-cols-2 gap-4"
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1562774053-701939374585?w=500&auto=format&fit=crop&q=80" 
+                  alt="Modern science lab" 
+                  className="rounded-lg shadow-md object-cover h-48 w-full"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1519070994522-88c6b756330e?w=500&auto=format&fit=crop&q=80" 
+                  alt="School library" 
+                  className="rounded-lg shadow-md object-cover h-48 w-full"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80" 
+                  alt="Computer lab" 
+                  className="rounded-lg shadow-md object-cover h-48 w-full"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=500&auto=format&fit=crop&q=80" 
+                  alt="Music studio" 
+                  className="rounded-lg shadow-md object-cover h-48 w-full"
+                />
+                <div className="col-span-2">
+                  <img 
+                    src="https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=800&auto=format&fit=crop&q=80" 
+                    alt="Sports facilities" 
+                    className="rounded-lg shadow-md object-cover h-56 w-full"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="achievements" className="focus-visible:outline-none focus-visible:ring-0">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="lg:col-span-2"
+              >
+                <h3 className="text-2xl font-bold mb-6 flex items-center">
+                  <Award className="h-6 w-6 mr-2 text-kenya-red" />
+                  Academic Achievements
+                </h3>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                  {achievements.map((achievement, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      className="bg-muted p-4 rounded-lg border-l-4 border-kenya-accent"
+                    >
+                      <p>{achievement}</p>
+                    </motion.div>
+                  ))}
+                </div>
+                
+                <h4 className="text-xl font-semibold mb-4">Success Stories</h4>
+                <div className="bg-white border rounded-lg p-6 shadow-sm mb-6">
+                  <div className="flex items-center mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=200&auto=format&fit=crop&q=80" 
+                      alt="Alumni portrait" 
+                      className="h-14 w-14 rounded-full object-cover mr-4"
+                    />
+                    <div>
+                      <h5 className="font-medium">Eng. Titus NZomo</h5>
+                      <p className="text-sm text-muted-foreground">Class of 2010, Software engineer & Science Teacher.</p>
+                    </div>
+                  </div>
+                  <blockquote className="italic text-muted-foreground">
+                    "The foundation I received at Jimba-Gede Secondary School was instrumental in my journey to becoming 
+                    a Software engineer. The teachers' dedication and rigorous academic program prepared me for success 
+                    at both university."
+                  </blockquote>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="bg-muted rounded-lg p-6"
+              >
+                <h3 className="text-xl font-bold mb-4">University Placements</h3>
+                <div className="space-y-4 mb-6">
+                  <div className="flex justify-between items-center">
+                    <span>Gede Vocational Training College</span>
+                    <span className="text-sm font-medium bg-kenya-green/10 text-kenya-green px-2 py-1 rounded">32%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2.5">
+                    <div className="bg-kenya-green h-2.5 rounded-full" style={{ width: '32%' }}></div>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <span>Kilifi KMTC</span>
+                    <span className="text-sm font-medium bg-kenya-red/10 text-kenya-red px-2 py-1 rounded">25%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2.5">
+                    <div className="bg-kenya-red h-2.5 rounded-full" style={{ width: '25%' }}></div>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <span>Watamu Polytechnic</span>
+                    <span className="text-sm font-medium bg-kenya-accent/10 text-kenya-accent px-2 py-1 rounded">18%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2.5">
+                    <div className="bg-kenya-accent h-2.5 rounded-full" style={{ width: '18%' }}></div>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <span>Foreign Institutions</span>
+                    <span className="text-sm font-medium bg-kenya-earth/10 text-kenya-earth px-2 py-1 rounded">15%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2.5">
+                    <div className="bg-kenya-earth h-2.5 rounded-full" style={{ width: '15%' }}></div>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <span>Other Institutions</span>
+                    <span className="text-sm font-medium bg-gray-500/10 text-gray-500 px-2 py-1 rounded">10%</span>
+                  </div>
+                  <div className="w-full bg-gray-200 rounded-full h-2.5">
+                    <div className="bg-gray-500 h-2.5 rounded-full" style={{ width: '10%' }}></div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center pt-4 border-t border-border">
+                  <MapPin className="h-5 w-5 text-kenya-red mr-2" />
+                  <p className="text-sm">Based on data from the last 5 graduating classes</p>
+                </div>
+              </motion.div>
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </section>
   );
 };
 
-export default AdmissionsSection;
+export default AcademicsSection;
