@@ -50,7 +50,7 @@ const Navbar = () => {
                     <div className="w-6 h-6 bg-kenya-green rounded-full"></div>
                   </div>
                 </div>
-                <span className="text-xl font-bold text-kenya-black">Nyota Secondary School</span>
+                <span className="text-xl font-bold text-kenya-black">Jimba-Gede Secondary School</span>
               </div>
             </motion.div>
           </div>
