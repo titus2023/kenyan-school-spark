@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Calendar, Book, Users, ArrowLeft, ArrowUp } from 'lucide-react';
@@ -11,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40 z-10"></div>
       <div 
         className="min-h-screen bg-cover bg-center flex items-center"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1613896640137-bb5b31496128?q=80&w=2070&auto=format&fit=crop')" }}
+        style={{ backgroundImage: "url('public/lovable-uploads/783a8bfb-77e0-44cd-81ae-9391a8bca754.png')" }}
       >
         <div className="section-container relative z-20 text-white">
           <div className="max-w-3xl">

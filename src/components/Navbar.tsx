@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -45,12 +44,12 @@ const Navbar = () => {
               className="flex items-center"
             >
               <div className="flex items-center space-x-2">
-                <div className="w-10 h-10 bg-kenya-red rounded-full flex items-center justify-center">
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                    <div className="w-6 h-6 bg-kenya-green rounded-full"></div>
+                <div className="w-12 h-12 bg-kenya-red rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                    <span className="text-xl font-bold text-kenya-green">JG</span>
                   </div>
                 </div>
-                <span className="text-xl font-bold text-kenya-black">Jimba-Gede Secondary School</span>
+                <span className="text-xl font-bold text-kenya-black">Jimba-Gede</span>
               </div>
             </motion.div>
           </div>

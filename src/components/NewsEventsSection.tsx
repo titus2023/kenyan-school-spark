@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin, ArrowRight } from 'lucide-react';
@@ -16,20 +15,20 @@ const NewsEventsSection = () => {
       title: "Jimba-Gede Students Excel in National Science Competition",
       date: "April 10, 2025",
       excerpt: "Our Form 3 students won first place in the National Science Competition with their innovative water purification project.",
-      image: "https://images.unsplash.com/photo-1503428593586-e225b39bddfe?w=800&auto=format&fit=crop&q=80"
+      image: "public/lovable-uploads/f30eb6b5-eeb4-47ed-ad31-fa4990f97919.png"
     },
     {
       title: "New Library Wing Opened by Education Cabinet Secretary",
       date: "March 15, 2025",
       excerpt: "The state-of-the-art facility adds 10,000 books and digital resources to our growing collection.",
-      image: "https://images.unsplash.com/photo-1568667256549-094345857637?w=800&auto=format&fit=crop&q=80"
+      image: "public/lovable-uploads/81a28463-cdf6-4427-b230-877495d5db5b.png"
     },
     {
       title: "Jimba-Gede Choir Qualifies for East African Music Festival",
       date: "February 28, 2025",
       excerpt: "After winning the regional competition, our choir will represent Kenya at the East African Music Festival in Uganda.",
-      image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&auto=format&fit=crop&q=80"
-    },
+      image: "public/lovable-uploads/2e36467f-59c7-439a-bcc1-0ab6d9bebc53.png"
+    }
   ];
   
   const upcomingEvents = [

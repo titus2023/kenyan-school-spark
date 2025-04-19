@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Music, Trophy, Users, HeartHandshake, Lightbulb, Palette } from 'lucide-react';
@@ -17,13 +16,13 @@ const StudentLifeSection = () => {
       icon: <Trophy className="h-6 w-6" />, 
       title: "Sports",
       description: "From football to athletics, our students excel in various sports at regional and national levels.",
-      image: "https://images.unsplash.com/photo-1459865264687-595d652de67e?w=800&auto=format&fit=crop&q=80"
+      image: "public/lovable-uploads/b0aefe2a-2477-47fa-b0c5-cc45cae82a55.png"
     },
     { 
       icon: <Music className="h-6 w-6" />, 
       title: "Music & Drama",
       description: "Award-winning modern dance that perform at major Music Festival.",
-      image: "https://images.unsplash.com/photo-1465821185615-20b3c2fbf41b?w=800&auto=format&fit=crop&q=80"
+      image: "public/lovable-uploads/dd2ac2c0-db22-44df-854e-5f6fd888272c.png"
     },
     { 
       icon: <Lightbulb className="h-6 w-6" />, 
@@ -186,15 +185,15 @@ const StudentLifeSection = () => {
               <div className="overflow-hidden rounded-lg">
                 <img 
                   className="h-auto max-w-full rounded-lg transition-transform duration-500 hover:scale-110" 
-                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=500&auto=format&fit=crop&q=80" 
+                  src="public/lovable-uploads/ac9de82b-8a85-4948-a999-1a131b062691.png"
                   alt="Students in class"
                 />
               </div>
               <div className="overflow-hidden rounded-lg">
                 <img 
                   className="h-auto max-w-full rounded-lg transition-transform duration-500 hover:scale-110" 
-                  src="https://images.unsplash.com/photo-1594608661623-aa0bd3a69799?w=500&auto=format&fit=crop&q=80" 
-                  alt="School choir"
+                  src="public/lovable-uploads/bd7a7496-ec95-4df9-9a2a-63871be0c296.png"
+                  alt="School activities"
                 />
               </div>
             </div>
@@ -202,15 +201,15 @@ const StudentLifeSection = () => {
               <div className="overflow-hidden rounded-lg">
                 <img 
                   className="h-auto max-w-full rounded-lg transition-transform duration-500 hover:scale-110" 
-                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=500&auto=format&fit=crop&q=80" 
-                  alt="Science experiment"
+                  src="public/lovable-uploads/817da9b6-7f73-442b-823d-6f0f2996eb0c.png"
+                  alt="Student meeting"
                 />
               </div>
               <div className="overflow-hidden rounded-lg">
                 <img 
                   className="h-auto max-w-full rounded-lg transition-transform duration-500 hover:scale-110" 
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&auto=format&fit=crop&q=80" 
-                  alt="School band"
+                  src="public/lovable-uploads/ce14d638-3f18-4058-9228-11b5eed74dac.png"
+                  alt="School assembly"
                 />
               </div>
             </div>
