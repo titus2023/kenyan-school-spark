@@ -19,7 +19,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen space-y-4 md:space-y-2">
       <Navbar />
       <HeroSection />
       <AboutSection />
@@ -35,3 +35,4 @@ const Index = () => {
 };
 
 export default Index;
+
