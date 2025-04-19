@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Check, Target, Heart, Award } from 'lucide-react';
@@ -68,7 +67,7 @@ const AboutSection = () => {
             className="relative"
           >
             <img 
-              src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&auto=format&fit=crop&q=80" 
+              src="public/lovable-uploads/ac9de82b-8a85-4948-a999-1a131b062691.png" 
               alt="School building" 
               className="rounded-lg shadow-lg w-full h-auto object-cover"
               style={{ height: "450px" }}
@@ -79,7 +78,6 @@ const AboutSection = () => {
           </motion.div>
         </div>
         
-        {/* Mission, Vision, Values */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

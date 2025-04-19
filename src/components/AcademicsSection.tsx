@@ -189,28 +189,28 @@ const AcademicsSection = () => {
                 className="grid grid-cols-2 gap-4"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1562774053-701939374585?w=500&auto=format&fit=crop&q=80" 
+                  src="public/lovable-uploads/817da9b6-7f73-442b-823d-6f0f2996eb0c.png" 
                   alt="Modern science lab" 
                   className="rounded-lg shadow-md object-cover h-48 w-full"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1519070994522-88c6b756330e?w=500&auto=format&fit=crop&q=80" 
+                  src="public/lovable-uploads/bd7a7496-ec95-4df9-9a2a-63871be0c296.png" 
                   alt="School library" 
                   className="rounded-lg shadow-md object-cover h-48 w-full"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80" 
+                  src="public/lovable-uploads/ce14d638-3f18-4058-9228-11b5eed74dac.png" 
                   alt="Computer lab" 
                   className="rounded-lg shadow-md object-cover h-48 w-full"
                 />
                 <img 
-                  src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=500&auto=format&fit=crop&q=80" 
+                  src="public/lovable-uploads/81a28463-cdf6-4427-b230-877495d5db5b.png" 
                   alt="Music studio" 
                   className="rounded-lg shadow-md object-cover h-48 w-full"
                 />
                 <div className="col-span-2">
                   <img 
-                    src="https://images.unsplash.com/photo-1564069114553-7215e1ff1890?w=800&auto=format&fit=crop&q=80" 
+                    src="public/lovable-uploads/f30eb6b5-eeb4-47ed-ad31-fa4990f97919.png" 
                     alt="Sports facilities" 
                     className="rounded-lg shadow-md object-cover h-56 w-full"
                   />
@@ -252,7 +252,7 @@ const AcademicsSection = () => {
                 <div className="bg-white border rounded-lg p-6 shadow-sm mb-6">
                   <div className="flex items-center mb-4">
                     <img 
-                      src="https://images.unsplash.com/photo-1507152832244-10d45c7eda57?w=200&auto=format&fit=crop&q=80" 
+                      src="public/lovable-uploads/2e36467f-59c7-439a-bcc1-0ab6d9bebc53.png" 
                       alt="Alumni portrait" 
                       className="h-14 w-14 rounded-full object-cover mr-4"
                     />
