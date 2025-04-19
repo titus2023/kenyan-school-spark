@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Calendar, Book, Users } from 'lucide-react';
+import { ArrowRight, Calendar, Book, Users, ArrowLeft, ArrowUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -30,7 +30,7 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-4xl md:text-6xl font-bold mb-6"
             >
-              Nyota Secondary School
+              Jimba Gede Secondary School
             </motion.h1>
             
             <motion.p
@@ -83,7 +83,7 @@ const HeroSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">School Calendar</h3>
-                  <p className="text-muted-foreground mb-3">Term starts January 8, 2024. View our full academic calendar.</p>
+                  <p className="text-muted-foreground mb-3">Term 2 starts April 29, 2025. View our full academic calendar.</p>
                   <a href="#calendar" className="text-kenya-red font-medium flex items-center hover:underline">
                     View Calendar <ArrowRight className="ml-1 h-4 w-4" />
                   </a>
@@ -104,7 +104,7 @@ const HeroSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Academic Excellence</h3>
-                  <p className="text-muted-foreground mb-3">Ranked among top 10 schools in Kenya. 95% university placement rate.</p>
+                  <p className="text-muted-foreground mb-3">Ranked among top focused schools in Kenya. With a recognized university placement rate.</p>
                   <a href="#curriculum" className="text-kenya-green font-medium flex items-center hover:underline">
                     Our Curriculum <ArrowRight className="ml-1 h-4 w-4" />
                   </a>
@@ -125,7 +125,7 @@ const HeroSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold mb-2">Student Life</h3>
-                  <p className="text-muted-foreground mb-3">Over 25 clubs and sports teams. Well-rounded development for every student.</p>
+                  <p className="text-muted-foreground mb-3">Over 10 clubs and sports teams. Well-rounded development for every student.</p>
                   <a href="#student-life" className="text-kenya-accent font-medium flex items-center hover:underline">
                     Explore Activities <ArrowRight className="ml-1 h-4 w-4" />
                   </a>
