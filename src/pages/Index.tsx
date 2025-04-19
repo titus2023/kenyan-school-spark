@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import AcademicsSection from '@/components/AcademicsSection';
-import StudentLifeSection from '@/components/StudentLifeSection';
+import StudentLifeSection from '@/components/student-life/StudentLifeSection';
 import AdmissionsSection from '@/components/AdmissionsSection';
 import NewsEventsSection from '@/components/NewsEventsSection';
 import ContactSection from '@/components/ContactSection';
