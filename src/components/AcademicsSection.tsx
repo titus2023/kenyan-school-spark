@@ -6,21 +6,21 @@ import { Button } from "@/components/ui/button";
 
 const AcademicsSection = () => {
   const academicSubjects = [
-    { icon: <BookOpen className="h-6 w-6" />, name: "Languages", description: "English, Kiswahili, French and German." },
+    { icon: <BookOpen className="h-6 w-6" />, name: "Languages", description: "English, Kiswahili." },
     { icon: <Calculator className="h-6 w-6" />, name: "Mathematics", description: "Core Mathematics and Additional Mathematics." },
-    { icon: <Beaker className="h-6 w-6" />, name: "Sciences", description: "Biology, Chemistry, Physics and Computer Studies." },
-    { icon: <Globe className="h-6 w-6" />, name: "Humanities", description: "History, Geography, Religious Studies and Social Ethics." },
-    { icon: <Palette className="h-6 w-6" />, name: "Arts", description: "Music, Art and Design, and Drama." },
-    { icon: <BookMarked className="h-6 w-6" />, name: "Technical Subjects", description: "Business Studies, Agriculture, and Home Science." },
+    { icon: <Beaker className="h-6 w-6" />, name: "Sciences", description: "Biology, Chemistry, Physics." },
+    { icon: <Globe className="h-6 w-6" />, name: "Humanities", description: "History, Geography, Religious Studies." },
+    { icon: <Palette className="h-6 w-6" />, name: "Arts", description: "Music, Art, and Drama." },
+    { icon: <BookMarked className="h-6 w-6" />, name: "Technical Subjects", description: "Business Studies, Agriculture." },
   ];
 
   const achievements = [
-    "Ranked #5 in national KCSE performance for 3 consecutive years",
-    "24 national science fair awards in the last decade",
-    "Produced 3 Rhodes Scholars in the past 5 years",
-    "Regional champions in debate competitions for 7 years running",
-    "Over 90% of our graduates gain admission to top universities",
-    "National mathematics olympiad winners 2022-2023",
+    "Ranked fairly in national KCSE performance for 3 consecutive years",
+    "4 national science fair awards in the last decade",
+    "Produced 4 University Students in the past 5 years",
+    "Regional Drama in debate competitions for 7 years running, Courtesy: Mr Nicholus.",
+    "Over 90% of our graduates gain admission to good tertiary institutions",
+    "Subcounty Javeline-Ladies  winners 2025",
   ];
 
   return (
@@ -129,7 +129,7 @@ const AcademicsSection = () => {
               >
                 <h3 className="text-2xl font-bold mb-6">State-of-the-art Learning Facilities</h3>
                 <p className="mb-6 text-muted-foreground">
-                  Our campus is equipped with modern facilities that create an optimal learning environment
+                  Our school is equipped with modern facilities that create an optimal learning environment
                   for our students. From science labs to sports facilities, we provide everything needed
                   for holistic development.
                 </p>
@@ -151,7 +151,7 @@ const AcademicsSection = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-1">Library & Resource Center</h4>
-                      <p className="text-muted-foreground">A comprehensive library with over 20,000 books, digital resources, and quiet study areas.</p>
+                      <p className="text-muted-foreground">A comprehensive library with several books, digital resources, and quiet study areas. Still improving...</p>
                     </div>
                   </div>
                   
@@ -161,7 +161,7 @@ const AcademicsSection = () => {
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold mb-1">Computer Labs</h4>
-                      <p className="text-muted-foreground">High-speed internet connected computer labs with the latest software for digital literacy and computer studies.</p>
+                      <p className="text-muted-foreground">There is a plan to install High-speed internet connected computer labs with the latest software for digital literacy and computer studies.</p>
                     </div>
                   </div>
                   
@@ -257,14 +257,14 @@ const AcademicsSection = () => {
                       className="h-14 w-14 rounded-full object-cover mr-4"
                     />
                     <div>
-                      <h5 className="font-medium">Dr. Amani Kariuki</h5>
-                      <p className="text-sm text-muted-foreground">Class of 2010, Neurosurgeon</p>
+                      <h5 className="font-medium">Eng. Titus NZomo</h5>
+                      <p className="text-sm text-muted-foreground">Class of 2010, Software engineer & Science Teacher.</p>
                     </div>
                   </div>
                   <blockquote className="italic text-muted-foreground">
-                    "The foundation I received at Nyota Secondary School was instrumental in my journey to becoming 
-                    a neurosurgeon. The teachers' dedication and rigorous academic program prepared me for success 
-                    at both university and medical school."
+                    "The foundation I received at Jimba-Gede Secondary School was instrumental in my journey to becoming 
+                    a Software engineer. The teachers' dedication and rigorous academic program prepared me for success 
+                    at both university."
                   </blockquote>
                 </div>
               </motion.div>
@@ -279,7 +279,7 @@ const AcademicsSection = () => {
                 <h3 className="text-xl font-bold mb-4">University Placements</h3>
                 <div className="space-y-4 mb-6">
                   <div className="flex justify-between items-center">
-                    <span>University of Nairobi</span>
+                    <span>Gede Vocational Training College</span>
                     <span className="text-sm font-medium bg-kenya-green/10 text-kenya-green px-2 py-1 rounded">32%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -287,7 +287,7 @@ const AcademicsSection = () => {
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span>Kenyatta University</span>
+                    <span>Kilifi KMTC</span>
                     <span className="text-sm font-medium bg-kenya-red/10 text-kenya-red px-2 py-1 rounded">25%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -295,7 +295,7 @@ const AcademicsSection = () => {
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span>Moi University</span>
+                    <span>Watamu Polytechnic</span>
                     <span className="text-sm font-medium bg-kenya-accent/10 text-kenya-accent px-2 py-1 rounded">18%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -303,7 +303,7 @@ const AcademicsSection = () => {
                   </div>
                   
                   <div className="flex justify-between items-center">
-                    <span>Foreign Universities</span>
+                    <span>Foreign Institutions</span>
                     <span className="text-sm font-medium bg-kenya-earth/10 text-kenya-earth px-2 py-1 rounded">15%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2.5">
