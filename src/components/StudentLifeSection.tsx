@@ -22,13 +22,13 @@ const StudentLifeSection = () => {
     { 
       icon: <Music className="h-6 w-6" />, 
       title: "Music & Drama",
-      description: "Award-winning choir, orchestra, and drama teams that perform at Kenya Music Festival.",
+      description: "Award-winning modern dance that perform at major Music Festival.",
       image: "https://images.unsplash.com/photo-1465821185615-20b3c2fbf41b?w=800&auto=format&fit=crop&q=80"
     },
     { 
       icon: <Lightbulb className="h-6 w-6" />, 
       title: "Clubs & Societies",
-      description: "Over 25 clubs including debate, science, entrepreneurship, and environmental conservation.",
+      description: "Over 10 clubs including debate, science, scouts, and environmental conservation.",
       image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&auto=format&fit=crop&q=80"
     },
     { 
@@ -64,7 +64,7 @@ const StudentLifeSection = () => {
           <h2 className="section-title">Student Life</h2>
           <div className="w-20 h-1 bg-kenya-accent mx-auto mt-4 mb-6"></div>
           <p className="max-w-3xl mx-auto text-lg text-muted-foreground">
-            At Nyota Secondary School, we believe in developing well-rounded individuals through diverse 
+            At Jimba-Gede Secondary School, we believe in developing well-rounded individuals through diverse 
             extracurricular activities and experiences outside the classroom.
           </p>
         </motion.div>
@@ -112,7 +112,7 @@ const StudentLifeSection = () => {
               <CarouselItem className="md:basis-1/2">
                 <div className="p-6">
                   <blockquote className="text-muted-foreground italic mb-4">
-                    "Being part of the debate team at Nyota has helped me develop confidence and critical thinking skills. 
+                    "Being part of the debate team at Jimba-Gede has helped me develop confidence and critical thinking skills. 
                     The teachers here don't just focus on academics but help us grow in every aspect of life."
                   </blockquote>
                   <div className="flex items-center">
@@ -122,8 +122,8 @@ const StudentLifeSection = () => {
                       className="h-12 w-12 rounded-full object-cover mr-4"
                     />
                     <div>
-                      <h5 className="font-medium">Faith Wanjiku</h5>
-                      <p className="text-sm text-muted-foreground">Form 4 Student</p>
+                      <h5 className="font-medium">Kelvin Katana</h5>
+                      <p className="text-sm text-muted-foreground">Form 3 Student</p>
                     </div>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ const StudentLifeSection = () => {
               <CarouselItem className="md:basis-1/2">
                 <div className="p-6">
                   <blockquote className="text-muted-foreground italic mb-4">
-                    "The sports program at Nyota has taught me discipline and teamwork. I've competed at national level
+                    "The sports program at Jimba-Gede has taught me discipline and teamwork. I've competed at national level
                     in athletics, an opportunity I wouldn't have had elsewhere. The school celebrates both academic
                     and extracurricular achievements."
                   </blockquote>
@@ -142,8 +142,8 @@ const StudentLifeSection = () => {
                       className="h-12 w-12 rounded-full object-cover mr-4"
                     />
                     <div>
-                      <h5 className="font-medium">David Ochieng</h5>
-                      <p className="text-sm text-muted-foreground">Form 3 Student</p>
+                      <h5 className="font-medium">Alex Rimba</h5>
+                      <p className="text-sm text-muted-foreground">Form 4 Student</p>
                     </div>
                   </div>
                 </div>
@@ -161,7 +161,7 @@ const StudentLifeSection = () => {
                       className="h-12 w-12 rounded-full object-cover mr-4"
                     />
                     <div>
-                      <h5 className="font-medium">Sarah Mwangi</h5>
+                      <h5 className="font-medium">Marrium Pole</h5>
                       <p className="text-sm text-muted-foreground">Form 4 Student</p>
                     </div>
                   </div>
