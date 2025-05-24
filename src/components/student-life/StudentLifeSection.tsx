@@ -30,25 +30,25 @@ const StudentLifeSection = () => {
       icon: Lightbulb, 
       title: "Clubs & Societies",
       description: "Over 10 clubs including debate, science, scouts, and environmental conservation.",
-      image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&auto=format&fit=crop&q=80"
+      image: "src/assets/images/clubs-societies.jpg"
     },
     { 
       icon: HeartHandshake, 
       title: "Community Service",
       description: "Regular outreach programs that instill values of service and social responsibility.",
-      image: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&auto=format&fit=crop&q=80"
+      image: "src/assets/images/community-service.jpg"
     },
     { 
       icon: Users, 
       title: "Leadership Development",
       description: "Student council, prefect body, and mentorship programs that build tomorrow's leaders.",
-      image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f8e1c1?w=800&auto=format&fit=crop&q=80"
+      image: "src/assets/images/leadership-development.jpg"
     },
     { 
       icon: Palette, 
       title: "Arts & Creativity",
       description: "Visual arts, creative writing, and design programs that nurture creative expression.",
-      image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80"
+      image: "src/assets/images/arts-creativity.jpg"
     },
   ];
 
@@ -57,19 +57,19 @@ const StudentLifeSection = () => {
       quote: "Being part of the debate team at Jimba-Gede has helped me develop confidence and critical thinking skills. The teachers here don't just focus on academics but help us grow in every aspect of life.",
       name: "Kelvin Katana",
       role: "Form 3 Student",
-      image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=200&auto=format&fit=crop&q=80"
+      image: "src/assets/images/student-kelvin.jpg"
     },
     {
       quote: "The sports program at Jimba-Gede has taught me discipline and teamwork. I've competed at national level in athletics, an opportunity I wouldn't have had elsewhere. The school celebrates both academic and extracurricular achievements.",
       name: "Alex Rimba",
       role: "Form 4 Student",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&auto=format&fit=crop&q=80"
+      image: "src/assets/images/student-alex.jpg"
     },
     {
       quote: "The community service projects organized by the school have opened my eyes to the needs around us. Through these activities, I've learned the importance of giving back and making a positive impact in society.",
       name: "Marrium Pole",
       role: "Form 4 Student",
-      image: "https://images.unsplash.com/photo-1536336132818-7f88e1ea2aa6?w=200&auto=format&fit=crop&q=80"
+      image: "src/assets/images/student-marrium.jpg"
     }
   ];
 
@@ -78,10 +78,10 @@ const StudentLifeSection = () => {
     { src: "public/lovable-uploads/bd7a7496-ec95-4df9-9a2a-63871be0c296.png", alt: "School activities" },
     { src: "public/lovable-uploads/817da9b6-7f73-442b-823d-6f0f2996eb0c.png", alt: "Student meeting" },
     { src: "public/lovable-uploads/ce14d638-3f18-4058-9228-11b5eed74dac.png", alt: "School assembly" },
-    { src: "https://images.unsplash.com/photo-1526675072445-6ec053b1de6c?w=500&auto=format&fit=crop&q=80", alt: "Sports event" },
-    { src: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=500&auto=format&fit=crop&q=80", alt: "Art class" },
-    { src: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=500&auto=format&fit=crop&q=80", alt: "School trip" },
-    { src: "https://images.unsplash.com/photo-1610226594738-20a0f09abbcc?w=500&auto=format&fit=crop&q=80", alt: "Graduation ceremony" }
+    { src: "src/assets/images/sports-event.jpg", alt: "Sports event" },
+    { src: "src/assets/images/art-class.jpg", alt: "Art class" },
+    { src: "src/assets/images/school-trip.jpg", alt: "School trip" },
+    { src: "src/assets/images/graduation-ceremony.jpg", alt: "Graduation ceremony" }
   ];
 
   return (
